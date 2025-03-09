@@ -15,7 +15,7 @@ def pin_to_ipfs(data):
 	if response.status_code == 200:
     		cid = response.json().get("Hash")  # Extract CID from response
     		return cid
-  	else:
+	else:
     		raise Exception(f"IPFS upload failed: {response.text}")
 
 def get_from_ipfs(cid,content_type="json"):
